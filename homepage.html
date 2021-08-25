@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hỏi đáp Covid với Chuyên gia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel='shortcut icon' type='image/x-icon' href='https://hoidapcovid19.s3.amazonaws.com/apple-icon-57x57.png' />
+
+    <meta name="description" content="câu hỏi, covid, phòng ngừa, điều trị">
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="https://hoidapcovid19.s3.amazonaws.com/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://hoidapcovid19.s3.amazonaws.com/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://hoidapcovid19.s3.amazonaws.com/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://hoidapcovid19.s3.amazonaws.com/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://hoidapcovid19.s3.amazonaws.com/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://hoidapcovid19.s3.amazonaws.com/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://hoidapcovid19.s3.amazonaws.com/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://hoidapcovid19.s3.amazonaws.com/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://hoidapcovid19.s3.amazonaws.com/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://hoidapcovid19.s3.amazonaws.com/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://hoidapcovid19.s3.amazonaws.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://hoidapcovid19.s3.amazonaws.com/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://hoidapcovid19.s3.amazonaws.com/favicon-16x16.png">
+    <link rel="manifest" href="https://hoidapcovid19.s3.amazonaws.com//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://hoidapcovid19.s3.amazonaws.com/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        .fakeimg {
+            height: 200px;
+            background: #aaa;
+        }
+
+        .float {
+            float: left;
+        }
+
+        .show{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+
+<body onload="load()">
+
+    <!-- <div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>Hỏi đáp mùa dịch</h1>
+  <p>Các câu hỏi thường gặp và tư vấn của chuyên gia</p> 
+</div> -->
+<div class="container">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="homepage.html">Trang chủ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="formcauhoi.html">Đặt câu hỏi</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" target="blank" href="https://moh.gov.vn/">Tin tức</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown ">
+                        <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                           Sổ tay Covid 19
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" target="blank"
+                                href="vesinhkk.html"> Vệ sinh khử khuẩn</a>
+                            <a class="dropdown-item" target="blank"
+                                href="hhvd.html"> Hô hấp vận động</a>
+                            <a class="dropdown-item" target="blank"
+                                href="dinhduong.html"> Dinh dưỡng</a>
+                            <a class="dropdown-item" target="blank"
+                                href="vesinhkk.html">Chăm sóc tại nhà</a>
+                            </div>
+                            </li>
+                <li class="nav-item">
+                    <div class="dropdown ">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            Video
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" target="blank"
+                                href="https://www.facebook.com/100009370694566/videos/pcb.3018439225145071/343116090632171">Tự
+                                test Covid tại nhà</a>
+                            <a class="dropdown-item" target="blank"
+                                href="https://www.facebook.com/100009370694566/videos/pcb.3018439225145071/560443172073390">F0
+                                nên làm gì?</a>
+                            <a class="dropdown-item" target="blank"
+                                href="https://www.facebook.com/100009370694566/videos/pcb.3018439225145071/122122006711910">Đối
+                                tượng tiêm vaccine?</a>
+                            <a class="dropdown-item" target="blank"
+                                href="https://www.facebook.com/100009370694566/videos/pcb.3017386395250354/339656767897310">Làm
+                                gì để bạn, gia đình, người thân an toàn trong dịch Covid?</a>
+                            <a class="dropdown-item" target="blank"
+                                href="https://www.facebook.com/100009370694566/videos/569222417426527/">Ý nghĩa của test
+                                nhanh Covid?</a>
+                            <a class="dropdown-item" target="blank"
+                                href="https://www.facebook.com/100009370694566/videos/1254328845005553/"> Chăm sóc và tự
+                                chăm sóc F0 tại nhà</a>
+
+
+                        </div> 
+                <li class="nav-item">
+                    <a 
+                        href="https://mdcovid.auth.us-east-1.amazoncognito.com/login?client_id=7cral40i1buic4h68543741duf&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://hoidapcovid.thuvienykhoa.net/callback.html">
+
+                        <button class="btn btn-info margin-right" type="submit">Đăng nhập</button></a>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+    <div class="container" style="margin-top:30px">
+
+        <div class="row">
+           <input type="text" id="keyword" onkeyup="search()"  placeholder="Nhập câu hỏi hoặc từ khóa " class="form-control" style="width:350px; margin-left: 15px;">
+           <button class="btn btn-primary" onclick="search()">Tìm kiếm</button>
+        </div>
+
+
+        <div id="notice" class="row"></div>
+        <div id="table" class="row"></div>
+
+
+        <div class="jumbotron text-center" style="margin-bottom:0">
+            <p>Những câu hỏi và giải đáp này được lấy từ 
+                <a href="https://www.facebook.com/profile.php?id=100009370694566" target="blank">Facebook</a> của bác sĩ Trương Hữu Khanh</p>
+            <p>Phát triển bởi Khánh Hương năm 2021 trên nền AWS API Gateway, Lambda, DynamoDB, S3, Cloudfront</p>
+        </div>
+
+</body>
+
+</html>
+
+<script>
+
+    function search(){
+        let keyword = removeTrail(document.querySelector('#keyword').value)
+
+
+        let items = document.querySelectorAll(".card")
+        for(let i=0; i<items.length; i++){
+            let item = items[i]
+
+            let question = findFirstChildByClass(item, "card-title").innerHTML
+            let answer = findFirstChildByClass(item, "card-text").innerHTML
+           
+            if (removeTrail(question).indexOf(keyword)>=0 || removeTrail(answer).indexOf(keyword)>=0 ){
+                item.classList.remove("hide")
+            }
+            else{
+                item.classList.add("hide")
+            }
+
+  
+        }
+
+
+    }
+
+    const endPoint = "https://mokz5qfh89.execute-api.us-east-1.amazonaws.com/mdcovid/hoidap"
+
+    function load() {
+
+        document.querySelector("#notice").innerHTML = "Đang tải dữ liệu. Vui lòng đợi"
+
+        fetch(endPoint, {
+            headers: {
+                'Authorization': null //access_token
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                let str = ""
+                for (let i = 0; i < data.Items.length; i++) {
+                    let imageStr = ''
+
+                    let remainder = i % 29
+                    
+                    imageStr = `hinhanh/covid${remainder}.jpeg`
+                
+
+
+                    let deleteLink = `<button onclick="remove('${data.Items[i].id}')">Delete</button>`
+                    let editLink = `<button onclick="edit('${data.Items[i].id}', '${data.Items[i].question}', '${data.Items[i].answer}')">Edit</button>`
+
+                    // str = str + `<h6 class="text-primary"> Hỏi: ${data.Items[i].question} </h6>`
+                    // str = str + `<p> => Đáp: ${data.Items[i].answer} </p>`
+
+                    let question = data.Items[i].question
+                    let answer =  data.Items[i].answer
+
+                    str = str + `<div class="card float" style="width:300px; height:500px; margin: 15px;">
+                            <img class="card-img-top" src="${imageStr}" alt="Covid">
+                            <div class="card-body">
+                                <h4 class="card-title">${question}</h4>
+                                <p class="card-text">${answer.substring(0, 100)} </p>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#qa" 
+                                    onclick="" onmouseover="popup('${data.Items[i].id}')">Xem thêm...</button>
+                            </div>
+                            </div>`
+                }
+
+                document.querySelector("#table").innerHTML = str
+
+                document.querySelector("#notice").innerHTML = ""
+
+            })
+
+    }
+
+    function findFirstChildByClass(element, className) {
+        var foundElement = null, found;
+        function recurse(element, className, found) {
+            for (var i = 0; i < element.childNodes.length && !found; i++) {
+                var el = element.childNodes[i];
+                var classes = el.className != undefined? el.className.split(" ") : [];
+                for (var j = 0, jl = classes.length; j < jl; j++) {
+                    if (classes[j] == className) {
+                        found = true;
+                        foundElement = element.childNodes[i];
+                        break;
+                    }
+                }
+                if(found)
+                    break;
+                recurse(element.childNodes[i], className, found);
+            }
+        }
+        recurse(element, className, false);
+        return foundElement;
+    }
+
+    function removeTrail(str) {
+    str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+    str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+    str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+    str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+    str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+    str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+    str = str.replace(/đ/g, "d");
+    str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
+    str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
+    str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "I");
+    str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
+    str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
+    str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
+    str = str.replace(/Đ/g, "D");
+    return str.toLowerCase(); 
+}
+
+function clean(strInputCode){
+    let s = strInputCode.replace(/<\/?[^>]+(>|$)/g, "")
+    return s.replace(/(\r\n|\n|\r)/gm, "");
+}
+
+
+function popup(id){
+
+    fetch(endPoint + "/" + id)
+        .then(res => res.json())
+        .then(json=>{
+
+            document.querySelector("#popupQuestion").innerHTML = json.Item.question
+            document.querySelector("#popupAnswer").innerHTML = json.Item.answer.replace(/\n/g, "<br/><br/>");
+
+        })
+      
+}
+
+
+
+</script>
+
+  <!-- Modal -->
+  <div class="modal fade" id="qa" tabindex="-1" role="dialog" aria-labelledby="popupQuestion" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="popupQuestion">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="popupAnswer">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>

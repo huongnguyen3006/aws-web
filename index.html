@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hỏi đáp Covid với Chuyên gia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .fakeimg {
+            height: 200px;
+            background: #aaa;
+        }
+
+        .float {
+            float: left;
+        }
+
+        .show{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+
+<body onload="load()">
+
+    <!-- <div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>Hỏi đáp mùa dịch</h1>
+  <p>Các câu hỏi thường gặp và tư vấn của chuyên gia</p> 
+</div> -->
+<div class="container">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="homepage.html">Trang chủ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="formcauhoi.html">Đặt câu hỏi</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" target="blank" href="https://moh.gov.vn/">Tin tức</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown ">
+                        <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                           Sổ tay Covid 19
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" target="blank"
+                                href="vesinhkk.html"> Vệ sinh khử khuẩn</a>
+                            <a class="dropdown-item" target="blank"
+                                href="hhvd.html"> Hô hấp vận động</a>
+                            <a class="dropdown-item" target="blank"
+                                href="dinhduong.html"> Dinh dưỡng</a>
+                            <a class="dropdown-item" target="blank"
+                                href="vesinhkk.html">Chăm sóc tại nhà</a>
+                            </div>
+                            
+                            </li>
+                <li class="nav-item">
+                    <div class="dropdown ">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            Video
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" target="blank"
+                                href="https://www.facebook.com/100009370694566/videos/pcb.3018439225145071/343116090632171">Tự
+                                test Covid tại nhà</a>
+                            <a class="dropdown-item" target="blank"
+                                href="https://www.facebook.com/100009370694566/videos/pcb.3018439225145071/560443172073390">F0
+                                nên làm gì?</a>
+                            <a class="dropdown-item" target="blank"
+                                href="https://www.facebook.com/100009370694566/videos/pcb.3018439225145071/122122006711910">Đối
+                                tượng tiêm vaccine?</a>
+                            <a class="dropdown-item" target="blank"
+                                href="https://www.facebook.com/100009370694566/videos/pcb.3017386395250354/339656767897310">Làm
+                                gì để bạn, gia đình, người thân an toàn trong dịch Covid?</a>
+                            <a class="dropdown-item" target="blank"
+                                href="https://www.facebook.com/100009370694566/videos/569222417426527/">Ý nghĩa của test
+                                nhanh Covid?</a>
+                            <a class="dropdown-item" target="blank"
+                                href="https://www.facebook.com/100009370694566/videos/1254328845005553/"> Chăm sóc và tự
+                                chăm sóc F0 tại nhà</a>
+
+
+                        </div> 
+                <li class="nav-item">
+                    <a 
+                        href="https://mdcovid.auth.us-east-1.amazoncognito.com/login?client_id=7cral40i1buic4h68543741duf&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://hoidapcovid.thuvienykhoa.net/callback.html">
+
+                        <button class="btn btn-info margin-right" type="submit">Đăng nhập</button></a>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+<body onload="load()">
+   
+    <div class="container">
+        <a href="https://mdcovid.auth.us-east-1.amazoncognito.com/login?client_id=7cral40i1buic4h68543741duf&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://hoidapcovid.thuvienykhoa.net/callback.html">
+        Logout
+        </a>
+
+
+            <h1>Nhập câu hỏi</h1>      
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input type="text" class="form-control" id="id">
+                <label for="question"> Câu hỏi:</label>
+                <input type="text" class="form-control" id="question">  
+                <label for="answer"> Trả lời:</label>
+                <!-- <input type="text" class="form-control" id="answer">   -->
+                <textarea class="form-control" name="" id="answer" cols="10" rows="10"></textarea>
+                           
+            </div>
+            <button class="btn btn-success" onclick="save()">Save</button>
+            <button class="btn btn-secondary"onclick="addNew()">Add new</button>
+          
+    
+        <h2>Danh sách câu hỏi</h2>      
+        <div id="table"></div>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    //const token = "eyJraWQiOiJFRXRWWkpMM1ArK0hmaUhTUWx1QjFGUDN0Y3FhbEVZTFFFaElOOWFENzkwPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhYWJjYzQ1Yi03MzcwLTQxNzItODgwNi1jMmM2OGIwOGMyOWUiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImF3cy5jb2duaXRvLnNpZ25pbi51c2VyLmFkbWluIHBob25lIG9wZW5pZCBlbWFpbCIsImF1dGhfdGltZSI6MTYyNjk0NTE0MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfcVQ5bTgwNlRjIiwiZXhwIjoxNjI2OTQ4NzQzLCJpYXQiOjE2MjY5NDUxNDMsInZlcnNpb24iOjIsImp0aSI6IjQ5Yjc3OGY0LTA5OWMtNDk3My04YmY5LThiYjk4YTdhZmM4MiIsImNsaWVudF9pZCI6IjJsMmdjaWVlbjJqc2VwOThxNGRpbGZvYmxuIiwidXNlcm5hbWUiOiJ0b21teTEyMyJ9.Q7heJ9dRmqZjHwRsT7CThJHYALnWysje9lVi50SYIuj9wkX_QdkFbDhK1cLzfn7lvtqU9ruqHcvRtIx2QidqSHe5tfyxnjJL9oSs8VTkjdNdDnUFS17NIDSCfWwXpfHB-UuGoJGzRhZsDV9nKfdiYZpGMkCgtjYrVurP8Ra4MtnEvb_Y0nqVeoBU--gJN7s6Y9dZlwlNHp-c38OvGpqaJmCsnuZcCY37GPD6CXGszGEx9rKz1QG9SepQ5bJqgU2qzLyrbcEV76uHTECHNQWBVwLgxYxlIj0CYseCqUzmU1L2XmpeIgKEt-elzYr3gfRTKCsrXH8vGKDRG-kpj4hRoA"
+
+    // const access_token = sessionStorage.getItem("access_token")
+    //if (access_token===""){
+    // document.location = "logout.html"
+    // }
+
+    const endPoint = "https://mokz5qfh89.execute-api.us-east-1.amazonaws.com/mdcovid/hoidap"
+
+    function load() {
+        fetch(endPoint, {
+            headers: {
+                'Authorization': null //access_token
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                let str = ""
+                str ="<table class='table'>"
+                for (let i = 0; i < data.Items.length; i++) {
+                    str +="<tr>"
+                    let deleteLink = `<button class='btn btn-primary' onclick="remove('${data.Items[i].id}')">Delete</button>`
+                    let editLink = `<button class='btn btn-primary' onclick="edit('${data.Items[i].id}')">Edit</button>`
+
+                    str = str + `<td>${data.Items[i].id} </td><td> ${data.Items[i].question} </td><td> ${data.Items[i].answer.substring(0,50)} </td><td>${deleteLink} ${editLink}</td>`
+                    str +="</tr>"    
+                }
+                str +="</table>"
+
+                document.querySelector("#table").innerHTML = str
+            })
+    }
+
+    function edit(id, question, answer) {
+
+        fetch(endPoint + "/" + id)
+        .then(res => res.json())
+        .then(json=>{
+
+            document.querySelector("#id").value = json.Item.id
+            document.querySelector("#question").value = json.Item.question
+            document.querySelector("#answer").value = json.Item.answer
+
+        })
+      
+ 
+       
+    }
+
+    function addNew() {
+
+        document.querySelector("#id").value = ''
+        document.querySelector("#question").value = ''
+        document.querySelector("#answer").value = ''
+        console.log(document.querySelector("#id").value)
+    }
+
+    function remove(id) {
+        fetch(endPoint + "/" + id, {
+            headers: {
+                'Authorization': null //access_token
+            },
+            method: 'delete'
+        })
+            .then(res => res.json())
+            .then(data => {
+                load()
+            })
+    }
+
+    function save() {
+        let id = document.querySelector("#id").value
+        let question = document.querySelector("#question").value
+        console.log(question)
+        let answer = document.querySelector("#answer").value
+        fetch(endPoint, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': null//access_token
+            },
+
+            method: 'put',
+            body: JSON.stringify({ id: id, question: question, answer: answer })
+        })
+            .then(res => res.json())
+            .then(data => {
+                load()
+            })
+    }
+
+  
+</script>
